@@ -7,4 +7,4 @@ working with leptos-rs
 
 0.0001 - small update to see browsers update automatically
 
-0.001 - show error in browser https://book.leptos.dev/getting_started/leptos_dx.html#1-set-up-console_error_panic_hook
+0.001 - show error in browser after https://book.leptos.dev/getting_started/leptos_dx.html#1-set-up-console_error_panic_hook
