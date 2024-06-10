@@ -5,6 +5,8 @@ start with
 
         trunk serve
 
+left off at https://book.leptos.dev/view/03_components.html#advanced-topic-componenttransparent
+
 # tags
 
 0.000 - clean start after https://book.leptos.dev/getting_started/index.html#hello-world-getting-set-up-for-leptos-csr-development
