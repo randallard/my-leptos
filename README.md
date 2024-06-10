@@ -17,4 +17,4 @@ start with
 
 0.004 - take a function into component https://book.leptos.dev/view/03_components.html#generic-props
 
-
+0.005 - derived Signal https://book.leptos.dev/view/03_components.html#into-props

@@ -8,11 +8,12 @@ fn main() {
 fn ProgressBar(
     #[prop(default = 100)]
     max: u16,
-    progress: impl Fn() -> i32 + 'static
+    #[prop(into)]
+    progress: Signal<i32>
 ) -> impl IntoView {
     view! {
         <progress
-            max="50"
+            max=max
             value=progress
             style="display: block"
         />
@@ -36,7 +37,7 @@ fn App() -> impl IntoView {
             {count}
         </button>
         <ProgressBar progress=count />
-        <ProgressBar progress=double_count />
+        <ProgressBar progress=Signal::derive(double_count)/>
         <div inner_html=html/>
     }
 }
