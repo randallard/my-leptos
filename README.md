@@ -15,4 +15,6 @@ start with
 
 0.003 - css / signals / derived signals - through https://book.leptos.dev/view/02_dynamic_attributes.html#derived-signals
 
-0.004 - take a function into component
+0.004 - take a function into component https://book.leptos.dev/view/03_components.html#generic-props
+
+
