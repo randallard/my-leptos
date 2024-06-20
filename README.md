@@ -1,6 +1,8 @@
 # my-leptos
 working with leptos-rs
 
+        cd leptos-tutorial
+
 start with 
 
         trunk serve
