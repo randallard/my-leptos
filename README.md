@@ -30,3 +30,5 @@ left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-wit
 0.0081 - Iterating over Complex Data https://book.leptos.dev/view/04b_iteration.html#option-1-change-the-key
 
 0.0082 - Iterating over Complex Data https://book.leptos.dev/view/04b_iteration.html#option-2-nested-signals
+
+0.0083 - Iterating over Complex Data https://book.leptos.dev/view/04b_iteration.html#option-3-memoized-slices
