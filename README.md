@@ -7,7 +7,7 @@ start with
 
         trunk serve
 
-left off at https://book.leptos.dev/view/03_components.html#advanced-topic-componenttransparent
+left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-with-the-for-component
 
 # tags
 
