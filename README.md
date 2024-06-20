@@ -22,3 +22,9 @@ left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-wit
 0.004 - take a function into component https://book.leptos.dev/view/03_components.html#generic-props
 
 0.005 - derived Signal https://book.leptos.dev/view/03_components.html#into-props
+
+0.006 - 
+
+0.007 - 
+
+0.0081 - Iterating over Complex Data https://book.leptos.dev/view/04b_iteration.html#option-1-change-the-key
