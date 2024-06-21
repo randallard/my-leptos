@@ -7,8 +7,7 @@ start with
 
         trunk serve
 
-left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-with-the-for-component
-
+left off at https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-listener
 # tags  
 
 0.000 - clean start after [setup](https://book.leptos.dev/getting_started/index.html#hello-world-getting-set-up-for-leptos-csr-development)
