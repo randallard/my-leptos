@@ -46,3 +46,5 @@ left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-wit
 - 0.0131 - [Passing a write signal](https://book.leptos.dev/view/08_parent_child.html#1-pass-a-writesignal)
 
 - 0.0132 - [Using a callback](https://book.leptos.dev/view/08_parent_child.html#2-use-a-callback)
+
+- 0.0133 - [Using a closure](https://book.leptos.dev/view/08_parent_child.html#21-use-closure-instead-of-callback)
