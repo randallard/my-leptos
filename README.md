@@ -38,3 +38,5 @@ left off at https://book.leptos.dev/view/04_iteration.html#dynamic-rendering-wit
 0.010 - Uncontrolled inputs https://book.leptos.dev/view/05_forms.html#uncontrolled-inputs
 
 0.011 - Control Flow https://book.leptos.dev/view/06_control_flow.html#control-flow
+
+0.012 - Error handling https://book.leptos.dev/view/07_errors.html#error-handling
