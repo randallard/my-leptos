@@ -47,3 +47,5 @@ left off at https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-lis
 - 0.0132 - [Using a callback](https://book.leptos.dev/view/08_parent_child.html#2-use-a-callback)
 
 - 0.0133 - [Using a closure](https://book.leptos.dev/view/08_parent_child.html#21-use-closure-instead-of-callback)
+
+- 0.0134 - [Using an event listener](https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-listener)
