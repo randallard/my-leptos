@@ -5,21 +5,17 @@ use leptos::ev::MouseEvent;
 pub fn App() -> impl IntoView {
     let (toggled, set_toggled) = create_signal(false);
     view! {
+        <h3>"Button C"</h3>
         <p>"Toggled? " {toggled}</p>
-        <ButtonB on_click=move |_| set_toggled.update(|value| *value = !*value)/>
+        <ButtonC on:click=move |_| set_toggled.update(|value| *value = !*value)/>
     }
 }
 
 
 #[component]
-pub fn ButtonB<F>(on_click: F) -> impl IntoView
-where
-    F: Fn(MouseEvent) + 'static
-{
+pub fn ButtonC() -> impl IntoView {
     view! {
-        <button on:click=on_click>
-            "Toggle"
-        </button>
+        <button>"Toggle"</button>
     }
 }
 
