@@ -1,21 +1,53 @@
 use leptos::*;
-use leptos::ev::MouseEvent;
 
 #[component]
 pub fn App() -> impl IntoView {
     let (toggled, set_toggled) = create_signal(false);
+
+    // share `set_toggled` with all children of this component
+    provide_context(set_toggled);
+
     view! {
-        <h3>"Button C"</h3>
         <p>"Toggled? " {toggled}</p>
-        <ButtonC on:click=move |_| set_toggled.update(|value| *value = !*value)/>
+        <Layout/>
     }
 }
 
+#[component]
+pub fn Layout() -> impl IntoView {
+    view! {
+        <header>
+            <h1>"My Page"</h1>
+        </header>
+        <main>
+            <Content/>
+        </main>
+    }
+}
 
 #[component]
-pub fn ButtonC() -> impl IntoView {
+pub fn Content() -> impl IntoView {
     view! {
-        <button>"Toggle"</button>
+        <div class="content">
+            <ButtonD/>
+        </div>
+    }
+}
+
+#[component]
+pub fn ButtonD() -> impl IntoView {
+    // use_context searches up the context tree, hoping to
+    // find a `WriteSignal<bool>`
+    // in this case, I .expect() because I know I provided it
+    let setter = use_context::<WriteSignal<bool>>()
+        .expect("to have found the setter provided");
+
+    view! {
+        <button
+            on:click=move |_| setter.update(|value| *value = !*value)
+        >
+            "Toggle"
+        </button>
     }
 }
 
