@@ -7,7 +7,7 @@ start with
 
         trunk serve
 
-left off at https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-listener
+left off at https://book.leptos.dev/view/09_component_children.html#component-children
 # tags  
 
 0.000 - clean start after [setup](https://book.leptos.dev/getting_started/index.html#hello-world-getting-set-up-for-leptos-csr-development)
@@ -40,7 +40,7 @@ left off at https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-lis
 
 0.012 - [Error handling](https://book.leptos.dev/view/07_errors.html#error-handling)
 
-[Child->Parent Communication](https://book.leptos.dev/view/08_parent_child.html#parent-child-communication)
+0.013 - [Child->Parent Communication](https://book.leptos.dev/view/08_parent_child.html#parent-child-communication)
 
 - 0.0131 - [Passing a write signal](https://book.leptos.dev/view/08_parent_child.html#1-pass-a-writesignal)
 
@@ -49,3 +49,6 @@ left off at https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-lis
 - 0.0133 - [Using a closure](https://book.leptos.dev/view/08_parent_child.html#21-use-closure-instead-of-callback)
 
 - 0.0134 - [Using an event listener](https://book.leptos.dev/view/08_parent_child.html#3-use-an-event-listener)
+
+- 0.0135 - [Providing a Context](https://book.leptos.dev/view/08_parent_child.html#4-providing-a-context)
+
