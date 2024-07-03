@@ -8,9 +8,12 @@ use leptos::{ev::MouseEvent, *};
 //    the child component to call
 // 3) <ButtonC/>: adding an `on:` event listener to a component
 // 4) <ButtonD/>: providing a context that is used in the component (rather than prop drilling)
+// 5) <ButtonE/>: another context used in the component
 
 #[derive(Copy, Clone)]
 struct SmallcapsContext(WriteSignal<bool>);
+#[derive(Copy, Clone)]
+struct BoldContext(WriteSignal<bool>);
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -19,11 +22,13 @@ pub fn App() -> impl IntoView {
     let (right, set_right) = create_signal(false);
     let (italics, set_italics) = create_signal(false);
     let (smallcaps, set_smallcaps) = create_signal(false);
+    let (bold, set_bold) = create_signal(false);
 
     // the newtype pattern isn't *necessary* here but is a good practice
     // it avoids confusion with other possible future `WriteSignal<bool>` contexts
     // and makes it easier to refer to it in ButtonC
     provide_context(SmallcapsContext(set_smallcaps));
+    provide_context(BoldContext(set_bold));
 
     view! {
         <main>
@@ -33,6 +38,7 @@ pub fn App() -> impl IntoView {
                 class:right=right
                 class:italics=italics
                 class:smallcaps=smallcaps
+                class:bold=bold
             >
                 "Lorem ipsum sit dolor amet."
             </p>
@@ -43,13 +49,15 @@ pub fn App() -> impl IntoView {
             // Button B: pass a closure
             <ButtonB on_click=move |_| set_right.update(|value| *value = !*value)/>
 
-            // Button B: use a regular event listener
+            // Button C: use a regular event listener
             // setting an event listener on a component like this applies it
             // to each of the top-level elements the component returns
             <ButtonC on:click=move |_| set_italics.update(|value| *value = !*value)/>
 
             // Button D gets its setter from context rather than props
             <ButtonD/>
+            // Button E also gets its setter from context rather than props
+            <ButtonE/>
         </main>
     }
 }
@@ -121,6 +129,19 @@ pub fn ButtonD() -> impl IntoView {
             on:click=move |_| setter.update(|value| *value = !*value)
         >
             "Toggle Small Caps"
+        </button>
+    }
+}
+
+#[component]
+pub fn ButtonE() -> impl IntoView {
+    let setter = use_context::<BoldContext>().unwrap().0;
+
+    view! {
+        <button
+            on:click=move |_| setter.update(|value| *value = !*value)
+        >
+            "Toggle Bold"
         </button>
     }
 }
